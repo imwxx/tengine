@@ -116,23 +116,6 @@ func main() {
             stdoutJson = append(stdoutJson, h500Stru)
         }
 
-        //http4xxNum, _ := strconv.ParseFloat(v.Http_4xx, 32)
-        //oldhttp4xxNum, _ := strconv.ParseFloat(oldjsonbody[v.Hostname].Http_4xx, 32)
-        //h4xxNum := http4xxNum - oldhttp4xxNum
-        //if h4xxNum > 0 {
-        //    h4xxPercent := h4xxNum / totalNum
-        //    var h4xxStru lib.SingelStdoutJson
-        //    h4xxStru.Endpoint = endpoint
-        //    h4xxtags := "flag=http_4xx,"+"domain="+hostname
-        //    h4xxStru.Tags = h4xxtags
-        //    h4xxStru.Timestamp = timestamp
-        //    h4xxStru.Metric = "tengine.req.httpStatus.percent"
-        //    h4xxStru.Value = h4xxPercent
-        //    h4xxStru.CounterType = "GAUGE"
-        //    h4xxStru.Step = 60
-        //    stdoutJson = append(stdoutJson, h4xxStru)
-        //}
-
         http499Num, _ := strconv.ParseFloat(v.Http_499, 32)
         oldhttp499Num, _ := strconv.ParseFloat(oldjsonbody[v.Hostname].Http_499, 32)
         h499Num := http499Num - oldhttp499Num
