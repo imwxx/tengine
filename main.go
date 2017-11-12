@@ -6,12 +6,10 @@ import (
     "os"
     "strconv"
     lib "tengine/lib"
-//    "reflect"
 )
 
 func main() {
     response, timestamp := lib.ResHandle()
-    //var jsonbody map[int]map[string]string
     var jsonbody map[string]lib.SingleJson
     err := json.Unmarshal(response, &jsonbody)
     if err != nil {
@@ -34,10 +32,6 @@ func main() {
         os.Exit(1)
     }
 
-//dataInfo := url.Values{}
-//dataInfo.Set("email", Username[0])
-//dataInfo.Add("content", content)
-//DATA := dataInfo.Encode()
     var stdoutJson lib.StdoutJson
     for _, v := range jsonbody {
         hostname := v.Hostname
